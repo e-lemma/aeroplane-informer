@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/e-lemma/aeroplane-informer#readme",
   "devDependencies": {
+    "@types/node": "^22.13.9",
     "@typescript-eslint/eslint-plugin": "^8.26.0",
     "@typescript-eslint/parser": "^8.26.0",
     "eslint": "^8.57.1",
