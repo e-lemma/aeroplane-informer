@@ -7,6 +7,6 @@ export interface Flight {
 }
 
 export interface Airport {
-  Name?: string
-  iata?: number
+  name: string
+  iata: number
 }
