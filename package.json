@@ -22,5 +22,10 @@
   "homepage": "https://github.com/e-lemma/aeroplane-informer#readme",
   "devDependencies": {
     "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^7.3.2",
+    "commander": "^13.1.0",
+    "dotenv": "^16.4.7"
   }
 }
