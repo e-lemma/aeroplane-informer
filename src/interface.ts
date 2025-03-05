@@ -6,7 +6,7 @@ export interface RawFlightData {
 }
 
 export interface RawWeatherData {
-  temp_c: any
+  temp_c: string
   condition: string
 }
 
