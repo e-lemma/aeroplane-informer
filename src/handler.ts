@@ -1,4 +1,5 @@
 import { readFileSync } from 'fs'
+import { Command } from 'commander'
 
 export class FileHandler {
   static read(): object[] {
@@ -12,4 +13,11 @@ export class FileHandler {
   }
 }
 
-export class ArgumentHandler {}
+export class ArgumentHandler {
+  static parseArgument(): string {
+    const program = new Command()
+    program.option('-a, --airport <name>', 'name of the airport')
+    program.parse()
+    return program.opts().airport
+  }
+}
