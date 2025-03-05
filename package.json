@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "@inquirer/prompts": "^7.3.2",
+    "axios": "^1.8.1",
     "commander": "^13.1.0",
     "dotenv": "^16.4.7"
   }
