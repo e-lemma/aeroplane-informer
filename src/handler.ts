@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs'
 
 export class FileHandler {
-  read(): object[] {
+  static read(): object[] {
     try {
       const data = readFileSync('./data/airports.json', 'utf-8')
       return JSON.parse(data)
