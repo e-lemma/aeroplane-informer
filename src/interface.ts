@@ -15,6 +15,7 @@ export interface TransformedFlightData {
   departureTime: string
   destinationAirport: string
   destinationTemperature: number
+  condition: string
   delay?: number
 }
 
