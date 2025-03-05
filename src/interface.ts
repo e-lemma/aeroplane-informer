@@ -1,7 +1,7 @@
 export interface RawFlightData {
   flight_number: string
-  departure_time: string
-  destination_iata: string
+  dep_time: string
+  arr_iata: string
   arr_delayed: number | null
 }
 
