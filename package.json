@@ -14,6 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/e-lemma/aeroplane-informer.git"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
