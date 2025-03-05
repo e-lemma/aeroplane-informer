@@ -2,7 +2,7 @@ export interface RawFlightData {
   flight_number: string
   dep_time: string
   arr_iata: string
-  arr_delayed: number | null
+  arr_delayed: string | null
 }
 
 export interface RawWeatherData {
@@ -11,12 +11,12 @@ export interface RawWeatherData {
 }
 
 export interface TransformedFlightData {
-  flightNumber: number
+  flightNumber: string
   departureTime: string
   destinationAirport: string
-  destinationTemperature: number
+  destinationTemperature: string
   condition: string
-  delay?: number
+  delay?: string
 }
 
 export interface Airport {
