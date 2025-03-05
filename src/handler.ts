@@ -1,8 +1,9 @@
 import { readFileSync } from 'fs'
 import { Command } from 'commander'
+import { Airport } from './interface.js'
 
 export class FileHandler {
-  static read(): object[] {
+  static read(): Airport[] {
     try {
       const data = readFileSync('./data/airports.json', 'utf-8')
       return JSON.parse(data)
