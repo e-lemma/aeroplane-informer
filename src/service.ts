@@ -1,8 +1,12 @@
-import { Flight } from './interface'
+import {
+  RawFlightData,
+  RawWeatherData,
+  TransformedFlightData,
+} from './interface'
 import 'dotenv/config'
 
 export class FlightService {
-  private flights: Flight[] = []
+  private flights: TransformedFlightData[] = []
   private readonly baseUrl = 'https://airlabs.co/api/v9/schedules?dep_iata='
   private readonly apiKey: string
 
