@@ -74,10 +74,15 @@ export class AeroplaneSearcherCLI {
         delayStatus = `{bold}{red-fg}${flight.delay} minutes{/red-fg}{/bold}`
       }
 
+      const destinationAirportName =
+        flight.destinationAirport === ''
+          ? `{bold}{red-fg} Unable to retrieve airport name {/red-fg}{/bold}`
+          : flight.destinationAirport
+
       tableData.push([
         flight.flightNumber,
         flight.departureTime,
-        flight.destinationAirport,
+        destinationAirportName,
         flight.destinationTemperature + ' °C',
         flight.condition,
         delayStatus,
@@ -133,9 +138,7 @@ export class AeroplaneSearcherCLI {
       formattedData.push({
         flightNumber: flight.flight_number,
         departureTime: flight.dep_time,
-        destinationAirport:
-          this.getAirportName(flight.arr_iata) ||
-          'Unable to retrieve airport name',
+        destinationAirport: this.getAirportName(flight.arr_iata) || '',
         destinationTemperature: weatherData.temp_c,
         condition: weatherData.condition,
         delay: flight.arr_delayed || undefined,
