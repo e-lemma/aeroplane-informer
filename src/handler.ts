@@ -1,6 +1,6 @@
-import { readFileSync } from 'fs'
+import { readFileSync, writeFileSync } from 'fs'
 import { Command } from 'commander'
-import { Airport } from './interface.js'
+import { Airport, TransformedFlightData } from './interface.js'
 
 export class FileHandler {
   static read(): Airport[] {
@@ -11,6 +11,23 @@ export class FileHandler {
       console.error(`Error reading JSON: ${error}`)
     }
     throw new Error('Could not read data file')
+  }
+
+  static exportAsJSON(data: TransformedFlightData[]): void {
+    try {
+      const getTimestamp = (): string => {
+        const currentDate = new Date()
+        return currentDate.toISOString().replace(/[:.]/g, '-')
+      }
+      writeFileSync(
+        `./data/exports/${getTimestamp()}.json`,
+        JSON.stringify(data, null, 2),
+      )
+      console.log('Changes saved!')
+    } catch (error) {
+      console.error(`Error writing JSON: ${error}`)
+      throw error
+    }
   }
 }
 
