@@ -99,7 +99,9 @@ export class AeroplaneSearcherCLI {
       formattedData.push({
         flightNumber: flight.flight_number,
         departureTime: flight.dep_time,
-        destinationAirport: this.getAirportName(flight.arr_iata) || 'idk',
+        destinationAirport:
+          this.getAirportName(flight.arr_iata) ||
+          'Unable to retrieve airport name',
         destinationTemperature: weatherData.temp_c,
         condition: weatherData.condition,
         delay: flight.arr_delayed || undefined,
