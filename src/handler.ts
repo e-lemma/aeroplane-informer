@@ -9,8 +9,8 @@ export class FileHandler {
       return JSON.parse(data)
     } catch (error) {
       console.error(`Error reading JSON: ${error}`)
+      throw new Error('Could not read airports.json file')
     }
-    throw new Error('Could not read data file')
   }
 
   static exportAsJSON(data: TransformedFlightData[]): void {
