@@ -26,11 +26,10 @@ export class AeroplaneSearcherCLI {
 
     flightData.forEach((flight: TransformedFlightData) => {
       let delayStatus
-      if (!flight.delay) {
-        delayStatus = '{bold}{green-fg}' + 'On Time' + '{/green-fg}{/bold}'
+      if (flight.delay === undefined) {
+        delayStatus = `{bold}{green-fg} On Time {/green-fg}{/bold}`
       } else {
-        delayStatus =
-          '{bold}{red-fg}' + `${flight.delay} Minutes` + '{/red-fg}{/bold}'
+        delayStatus = `{bold}{red-fg}${flight.delay} minutes{/red-fg}{/bold}`
       }
 
       tableData.push([
@@ -50,11 +49,8 @@ export class AeroplaneSearcherCLI {
 
     const table = blessed.listtable({
       parent: screen,
-      top: 'center',
-      left: 'center',
-      width: '90%',
-      height: '80%',
-      align: 'center',
+      width: '100%',
+      height: '100%',
       tags: true,
       border: { type: 'line' },
       style: {
@@ -67,10 +63,6 @@ export class AeroplaneSearcherCLI {
       vi: true,
       mouse: true,
       scrollable: true,
-      alwaysScroll: true,
-      scrollbar: {
-        ch: ' ',
-      },
       data: tableData,
     })
 
