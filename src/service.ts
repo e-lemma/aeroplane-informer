@@ -51,7 +51,7 @@ export class WeatherService {
 
   async fetchWeatherByIata(iata: string): Promise<RawWeatherData> {
     try {
-      const url = `${this.baseUrl}${this.apiKey}&q=iata:${iata}%aqi=no`
+      const url = `${this.baseUrl}${this.apiKey}&q=iata:${iata}&aqi=no`
       const response = await axios.get(url)
       const data = response.data.current
 
