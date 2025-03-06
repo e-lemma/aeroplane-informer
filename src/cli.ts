@@ -47,10 +47,11 @@ export class AeroplaneSearcherCLI {
     if (data.length > 0) {
       FileHandler.exportAsJSON(data)
       this.printTable(data)
+    } else {
+      console.log(
+        `Could not find any flights departing from '${matchingAirport.name}'`,
+      )
     }
-    console.log(
-      `Could not find any flights departing from '${matchingAirport.name}'`,
-    )
   }
 
   printTable(flightData: TransformedFlightData[]) {
