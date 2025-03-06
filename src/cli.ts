@@ -134,7 +134,14 @@ export class AeroplaneSearcherCLI {
       weatherApiKey,
       matchingAirport.iata,
     )
-    this.printTable(data)
+
+    if (data.length > 0) {
+      FileHandler.exportAsJSON(data)
+      this.printTable(data)
+    }
+    console.log(
+      `Could not find any flights departing from '${matchingAirport.name}'`,
+    )
   }
 
   printGreeting(): void {
