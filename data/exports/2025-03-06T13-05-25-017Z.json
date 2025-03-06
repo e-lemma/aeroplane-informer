@@ -1,0 +1,729 @@
+[
+  {
+    "flightNumber": "240",
+    "departureTime": "2025-03-06 14:05",
+    "destinationAirport": "Bahir Dar Airport",
+    "destinationTemperature": 28.6,
+    "condition": "Sunny",
+    "delay": 1
+  },
+  {
+    "flightNumber": "168",
+    "departureTime": "2025-03-06 14:30",
+    "destinationAirport": "Gonder Airport",
+    "destinationTemperature": 26.9,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "142",
+    "departureTime": "2025-03-06 15:00",
+    "destinationAirport": "Bahir Dar Airport",
+    "destinationTemperature": 28.6,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "260",
+    "departureTime": "2025-03-06 15:00",
+    "destinationAirport": "Mekele Airport",
+    "destinationTemperature": 24.3,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "6603",
+    "departureTime": "2025-03-06 14:50",
+    "destinationAirport": "Dubai International Airport",
+    "destinationTemperature": 31.4,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "724",
+    "departureTime": "2025-03-06 14:50",
+    "destinationAirport": "Dubai International Airport",
+    "destinationTemperature": 31.4,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "7592",
+    "departureTime": "2025-03-06 14:50",
+    "destinationAirport": "Dubai International Airport",
+    "destinationTemperature": 31.4,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "378",
+    "departureTime": "2025-03-06 14:45",
+    "destinationAirport": "Aden Adde International Airport",
+    "destinationTemperature": 29,
+    "condition": "Partly cloudy",
+    "delay": 11
+  },
+  {
+    "flightNumber": "284",
+    "departureTime": "2025-03-06 15:15",
+    "destinationAirport": "Shire Inda Selassie Airport",
+    "destinationTemperature": 28,
+    "condition": "Sunny",
+    "delay": 1
+  },
+  {
+    "flightNumber": "8724",
+    "departureTime": "2025-03-06 14:50",
+    "destinationAirport": "Dubai International Airport",
+    "destinationTemperature": 31.4,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "135",
+    "departureTime": "2025-03-06 15:10",
+    "destinationAirport": "Arba Minch Airport",
+    "destinationTemperature": 31.5,
+    "condition": "Sunny",
+    "delay": 15
+  },
+  {
+    "flightNumber": "803",
+    "departureTime": "2025-03-06 15:05",
+    "destinationAirport": "Mwalimu Julius K. Nyerere International Airport",
+    "destinationTemperature": 31.7,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "192",
+    "departureTime": "2025-03-06 15:00",
+    "destinationAirport": "Combolcha Airport",
+    "destinationTemperature": 21.8,
+    "condition": "Patchy rain nearby"
+  },
+  {
+    "flightNumber": "354",
+    "departureTime": "2025-03-06 14:55",
+    "destinationAirport": "Juba Airport",
+    "destinationTemperature": 41.2,
+    "condition": "Sunny",
+    "delay": 18
+  },
+  {
+    "flightNumber": "817",
+    "departureTime": "2025-03-06 15:15",
+    "destinationAirport": "Kigali International Airport",
+    "destinationTemperature": 31.3,
+    "condition": "Partly cloudy",
+    "delay": 10
+  },
+  {
+    "flightNumber": "1205",
+    "departureTime": "2025-03-06 15:15",
+    "destinationAirport": "Kigali International Airport",
+    "destinationTemperature": 31.3,
+    "condition": "Partly cloudy",
+    "delay": 10
+  },
+  {
+    "flightNumber": "212",
+    "departureTime": "2025-03-06 15:00",
+    "destinationAirport": "Unable to retrieve airport name",
+    "destinationTemperature": 27.4,
+    "condition": "Sunny",
+    "delay": 19
+  },
+  {
+    "flightNumber": "374",
+    "departureTime": "2025-03-06 15:40",
+    "destinationAirport": "Egal International Airport",
+    "destinationTemperature": 28.5,
+    "condition": "Sunny",
+    "delay": 136
+  },
+  {
+    "flightNumber": "157",
+    "departureTime": "2025-03-06 15:30",
+    "destinationAirport": "Awassa Airport",
+    "destinationTemperature": 29,
+    "condition": "Patchy rain nearby",
+    "delay": 1
+  },
+  {
+    "flightNumber": "226",
+    "departureTime": "2025-03-06 15:30",
+    "destinationAirport": "Unable to retrieve airport name",
+    "destinationTemperature": 27.4,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "159",
+    "departureTime": "2025-03-06 15:25",
+    "destinationAirport": "Asosa Airport",
+    "destinationTemperature": 33.2,
+    "condition": "Sunny",
+    "delay": 4
+  },
+  {
+    "flightNumber": "7598",
+    "departureTime": "2025-03-06 15:30",
+    "destinationAirport": "Mombasa Moi International Airport",
+    "destinationTemperature": 33.3,
+    "condition": "Partly cloudy",
+    "delay": 14
+  },
+  {
+    "flightNumber": "1043",
+    "departureTime": "2025-03-06 15:30",
+    "destinationAirport": "Mombasa Moi International Airport",
+    "destinationTemperature": 33.3,
+    "condition": "Partly cloudy",
+    "delay": 14
+  },
+  {
+    "flightNumber": "324",
+    "departureTime": "2025-03-06 15:30",
+    "destinationAirport": "Mombasa Moi International Airport",
+    "destinationTemperature": 33.3,
+    "condition": "Partly cloudy",
+    "delay": 14
+  },
+  {
+    "flightNumber": "7574",
+    "departureTime": "2025-03-06 15:35",
+    "destinationAirport": "OR Tambo International Airport",
+    "destinationTemperature": 31.1,
+    "condition": "Sunny",
+    "delay": 20
+  },
+  {
+    "flightNumber": "1016",
+    "departureTime": "2025-03-06 15:35",
+    "destinationAirport": "OR Tambo International Airport",
+    "destinationTemperature": 31.1,
+    "condition": "Sunny",
+    "delay": 20
+  },
+  {
+    "flightNumber": "849",
+    "departureTime": "2025-03-06 15:35",
+    "destinationAirport": "OR Tambo International Airport",
+    "destinationTemperature": 31.1,
+    "condition": "Sunny",
+    "delay": 20
+  },
+  {
+    "flightNumber": "116",
+    "departureTime": "2025-03-06 15:40",
+    "destinationAirport": "Mekele Airport",
+    "destinationTemperature": 24.3,
+    "condition": "Sunny",
+    "delay": 1
+  },
+  {
+    "flightNumber": "6334",
+    "departureTime": "2025-03-06 15:35",
+    "destinationAirport": "Entebbe International Airport",
+    "destinationTemperature": 30.2,
+    "condition": "Partly cloudy",
+    "delay": 10
+  },
+  {
+    "flightNumber": "6334",
+    "departureTime": "2025-03-06 15:35",
+    "destinationAirport": "Entebbe International Airport",
+    "destinationTemperature": 30.2,
+    "condition": "Partly cloudy",
+    "delay": 10
+  },
+  {
+    "flightNumber": "334",
+    "departureTime": "2025-03-06 15:35",
+    "destinationAirport": "Entebbe International Airport",
+    "destinationTemperature": 30.2,
+    "condition": "Partly cloudy",
+    "delay": 10
+  },
+  {
+    "flightNumber": "7570",
+    "departureTime": "2025-03-06 15:35",
+    "destinationAirport": "Entebbe International Airport",
+    "destinationTemperature": 30.2,
+    "condition": "Partly cloudy",
+    "delay": 10
+  },
+  {
+    "flightNumber": "722",
+    "departureTime": "2025-03-06 15:30",
+    "destinationAirport": "Unable to retrieve airport name",
+    "destinationTemperature": 12.2,
+    "condition": "Sunny",
+    "delay": 3
+  },
+  {
+    "flightNumber": "8870",
+    "departureTime": "2025-03-06 15:30",
+    "destinationAirport": "Unable to retrieve airport name",
+    "destinationTemperature": 12.2,
+    "condition": "Sunny",
+    "delay": 3
+  },
+  {
+    "flightNumber": "680",
+    "departureTime": "2025-03-06 15:50",
+    "destinationAirport": "Dhaka / Hazrat Shahjalal International Airport",
+    "destinationTemperature": 23.7,
+    "condition": "Clear",
+    "delay": 6
+  },
+  {
+    "flightNumber": "180",
+    "departureTime": "2025-03-06 15:50",
+    "destinationAirport": "Bahir Dar Airport",
+    "destinationTemperature": 28.6,
+    "condition": "Sunny",
+    "delay": 3
+  },
+  {
+    "flightNumber": "364",
+    "departureTime": "2025-03-06 15:55",
+    "destinationAirport": "Djibouti-Ambouli Airport",
+    "destinationTemperature": 26.8,
+    "condition": "Patchy rain nearby"
+  },
+  {
+    "flightNumber": "164",
+    "departureTime": "2025-03-06 15:55",
+    "destinationAirport": "Sheffield City Heliport",
+    "destinationTemperature": 35.9,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "688",
+    "departureTime": "2025-03-06 15:55",
+    "destinationAirport": "Indira Gandhi International Airport",
+    "destinationTemperature": 25.3,
+    "condition": "Mist"
+  },
+  {
+    "flightNumber": "7568",
+    "departureTime": "2025-03-06 15:55",
+    "destinationAirport": "Indira Gandhi International Airport",
+    "destinationTemperature": 25.3,
+    "condition": "Mist"
+  },
+  {
+    "flightNumber": "133",
+    "departureTime": "2025-03-06 15:50",
+    "destinationAirport": "Jimma Airport",
+    "destinationTemperature": 28.3,
+    "condition": "Sunny",
+    "delay": 14
+  },
+  {
+    "flightNumber": "502",
+    "departureTime": "2025-03-06 16:00",
+    "destinationAirport": "Aden Adde International Airport",
+    "destinationTemperature": 29,
+    "condition": "Partly cloudy"
+  },
+  {
+    "flightNumber": "166",
+    "departureTime": "2025-03-06 16:05",
+    "destinationAirport": "Combolcha Airport",
+    "destinationTemperature": 21.8,
+    "condition": "Patchy rain nearby"
+  },
+  {
+    "flightNumber": "140",
+    "departureTime": "2025-03-06 16:10",
+    "destinationAirport": "Bahir Dar Airport",
+    "destinationTemperature": 28.6,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "190",
+    "departureTime": "2025-03-06 16:15",
+    "destinationAirport": "Mekele Airport",
+    "destinationTemperature": 24.3,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "146",
+    "departureTime": "2025-03-06 16:30",
+    "destinationAirport": "Bahir Dar Airport",
+    "destinationTemperature": 28.6,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "179",
+    "departureTime": "2025-03-06 16:40",
+    "destinationAirport": "Awassa Airport",
+    "destinationTemperature": 29,
+    "condition": "Patchy rain nearby"
+  },
+  {
+    "flightNumber": "222",
+    "departureTime": "2025-03-06 16:40",
+    "destinationAirport": "Aba Tenna Dejazmach Yilma International Airport",
+    "destinationTemperature": 30.8,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "262",
+    "departureTime": "2025-03-06 17:00",
+    "destinationAirport": "Mekele Airport",
+    "destinationTemperature": 24.3,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "242",
+    "departureTime": "2025-03-06 17:20",
+    "destinationAirport": "Bahir Dar Airport",
+    "destinationTemperature": 28.6,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "298",
+    "departureTime": "2025-03-06 17:40",
+    "destinationAirport": "Mekele Airport",
+    "destinationTemperature": 24.3,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "280",
+    "departureTime": "2025-03-06 17:50",
+    "destinationAirport": "Aba Tenna Dejazmach Yilma International Airport",
+    "destinationTemperature": 30.8,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "220",
+    "departureTime": "2025-03-06 18:05",
+    "destinationAirport": "Aba Tenna Dejazmach Yilma International Airport",
+    "destinationTemperature": 30.8,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "8806",
+    "departureTime": "2025-03-06 18:35",
+    "destinationAirport": "Ben Gurion International Airport",
+    "destinationTemperature": 21.1,
+    "condition": "Partly cloudy"
+  },
+  {
+    "flightNumber": "414",
+    "departureTime": "2025-03-06 18:35",
+    "destinationAirport": "Ben Gurion International Airport",
+    "destinationTemperature": 21.1,
+    "condition": "Partly cloudy"
+  },
+  {
+    "flightNumber": "640",
+    "departureTime": "2025-03-06 18:50",
+    "destinationAirport": "Chhatrapati Shivaji International Airport",
+    "destinationTemperature": 31.4,
+    "condition": "Overcast"
+  },
+  {
+    "flightNumber": "7565",
+    "departureTime": "2025-03-06 18:50",
+    "destinationAirport": "Chhatrapati Shivaji International Airport",
+    "destinationTemperature": 31.4,
+    "condition": "Overcast"
+  },
+  {
+    "flightNumber": "7535",
+    "departureTime": "2025-03-06 20:00",
+    "destinationAirport": "Jomo Kenyatta International Airport",
+    "destinationTemperature": 29.2,
+    "condition": "Partly cloudy"
+  },
+  {
+    "flightNumber": "4217",
+    "departureTime": "2025-03-06 20:00",
+    "destinationAirport": "Jomo Kenyatta International Airport",
+    "destinationTemperature": 29.2,
+    "condition": "Partly cloudy"
+  },
+  {
+    "flightNumber": "403",
+    "departureTime": "2025-03-06 20:00",
+    "destinationAirport": "Jomo Kenyatta International Airport",
+    "destinationTemperature": 29.2,
+    "condition": "Partly cloudy"
+  },
+  {
+    "flightNumber": "3267",
+    "departureTime": "2025-03-06 20:00",
+    "destinationAirport": "Jomo Kenyatta International Airport",
+    "destinationTemperature": 29.2,
+    "condition": "Partly cloudy"
+  },
+  {
+    "flightNumber": "648",
+    "departureTime": "2025-03-06 20:45",
+    "destinationAirport": "Dubai International Airport",
+    "destinationTemperature": 31.4,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "406",
+    "departureTime": "2025-03-06 21:30",
+    "destinationAirport": "Beirut Rafic Hariri International Airport",
+    "destinationTemperature": 19.3,
+    "condition": "Partly cloudy"
+  },
+  {
+    "flightNumber": "843",
+    "departureTime": "2025-03-06 21:35",
+    "destinationAirport": "Ndjili International Airport",
+    "destinationTemperature": 31.4,
+    "condition": "Partly cloudy"
+  },
+  {
+    "flightNumber": "3653",
+    "departureTime": "2025-03-06 21:45",
+    "destinationAirport": "Dubai International Airport",
+    "destinationTemperature": 31.4,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "6070",
+    "departureTime": "2025-03-06 21:45",
+    "destinationAirport": "Dubai International Airport",
+    "destinationTemperature": 31.4,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "1109",
+    "departureTime": "2025-03-06 21:45",
+    "destinationAirport": "Dubai International Airport",
+    "destinationTemperature": 31.4,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "600",
+    "departureTime": "2025-03-06 21:45",
+    "destinationAirport": "Dubai International Airport",
+    "destinationTemperature": 31.4,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "8600",
+    "departureTime": "2025-03-06 21:45",
+    "destinationAirport": "Dubai International Airport",
+    "destinationTemperature": 31.4,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "432",
+    "departureTime": "2025-03-06 21:50",
+    "destinationAirport": "Doha International Airport",
+    "destinationTemperature": 23,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "6620",
+    "departureTime": "2025-03-06 21:55",
+    "destinationAirport": "Kuwait International Airport",
+    "destinationTemperature": 18.6,
+    "condition": "Overcast"
+  },
+  {
+    "flightNumber": "620",
+    "departureTime": "2025-03-06 21:55",
+    "destinationAirport": "Kuwait International Airport",
+    "destinationTemperature": 18.6,
+    "condition": "Overcast"
+  },
+  {
+    "flightNumber": "7973",
+    "departureTime": "2025-03-06 22:00",
+    "destinationAirport": "Harare International Airport",
+    "destinationTemperature": 27,
+    "condition": "Partly Cloudy"
+  },
+  {
+    "flightNumber": "893",
+    "departureTime": "2025-03-06 22:00",
+    "destinationAirport": "Harare International Airport",
+    "destinationTemperature": 27,
+    "condition": "Partly Cloudy"
+  },
+  {
+    "flightNumber": "518",
+    "departureTime": "2025-03-06 22:00",
+    "destinationAirport": "Leonardo Da Vinci (Fiumicino) International Airport",
+    "destinationTemperature": 17.1,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "452",
+    "departureTime": "2025-03-06 22:05",
+    "destinationAirport": "Cairo International Airport",
+    "destinationTemperature": 21.1,
+    "condition": "Partly cloudy"
+  },
+  {
+    "flightNumber": "9463",
+    "departureTime": "2025-03-06 22:05",
+    "destinationAirport": "Cairo International Airport",
+    "destinationTemperature": 21.1,
+    "condition": "Partly cloudy"
+  },
+  {
+    "flightNumber": "424",
+    "departureTime": "2025-03-06 22:10",
+    "destinationAirport": "Bahrain International Airport",
+    "destinationTemperature": 19.2,
+    "condition": "Light rain"
+  },
+  {
+    "flightNumber": "6250",
+    "departureTime": "2025-03-06 22:10",
+    "destinationAirport": "Bahrain International Airport",
+    "destinationTemperature": 19.2,
+    "condition": "Light rain"
+  },
+  {
+    "flightNumber": "891",
+    "departureTime": "2025-03-06 22:10",
+    "destinationAirport": "Lusaka International Airport",
+    "destinationTemperature": 25.3,
+    "condition": "Patchy light rain in area with thunder"
+  },
+  {
+    "flightNumber": "857",
+    "departureTime": "2025-03-06 22:15",
+    "destinationAirport": "Lubumbashi International Airport",
+    "destinationTemperature": 24.3,
+    "condition": "Patchy light rain in area with thunder"
+  },
+  {
+    "flightNumber": "624",
+    "departureTime": "2025-03-06 22:20",
+    "destinationAirport": "Muscat International Airport",
+    "destinationTemperature": 25,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "5002",
+    "departureTime": "2025-03-06 22:20",
+    "destinationAirport": "Muscat International Airport",
+    "destinationTemperature": 25,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "6422",
+    "departureTime": "2025-03-06 22:25",
+    "destinationAirport": "King Fahd International Airport",
+    "destinationTemperature": 20.1,
+    "condition": "Partly cloudy"
+  },
+  {
+    "flightNumber": "422",
+    "departureTime": "2025-03-06 22:25",
+    "destinationAirport": "King Fahd International Airport",
+    "destinationTemperature": 20.1,
+    "condition": "Partly cloudy"
+  },
+  {
+    "flightNumber": "6964",
+    "departureTime": "2025-03-06 22:25",
+    "destinationAirport": "King Fahd International Airport",
+    "destinationTemperature": 20.1,
+    "condition": "Partly cloudy"
+  },
+  {
+    "flightNumber": "416",
+    "departureTime": "2025-03-06 22:30",
+    "destinationAirport": "Beirut Rafic Hariri International Airport",
+    "destinationTemperature": 19.3,
+    "condition": "Partly cloudy"
+  },
+  {
+    "flightNumber": "428",
+    "departureTime": "2025-03-06 22:30",
+    "destinationAirport": "Queen Alia International Airport",
+    "destinationTemperature": 13.3,
+    "condition": "Overcast"
+  },
+  {
+    "flightNumber": "412",
+    "departureTime": "2025-03-06 22:35",
+    "destinationAirport": "King Khaled International Airport",
+    "destinationTemperature": 24.2,
+    "condition": "Overcast"
+  },
+  {
+    "flightNumber": "6412",
+    "departureTime": "2025-03-06 22:35",
+    "destinationAirport": "King Khaled International Airport",
+    "destinationTemperature": 24.2,
+    "condition": "Overcast"
+  },
+  {
+    "flightNumber": "9761",
+    "departureTime": "2025-03-06 22:35",
+    "destinationAirport": "Incheon International Airport",
+    "destinationTemperature": 3.1,
+    "condition": "Clear"
+  },
+  {
+    "flightNumber": "6962",
+    "departureTime": "2025-03-06 22:35",
+    "destinationAirport": "King Khaled International Airport",
+    "destinationTemperature": 24.2,
+    "condition": "Overcast"
+  },
+  {
+    "flightNumber": "672",
+    "departureTime": "2025-03-06 22:35",
+    "destinationAirport": "Incheon International Airport",
+    "destinationTemperature": 3.1,
+    "condition": "Clear"
+  },
+  {
+    "flightNumber": "5340",
+    "departureTime": "2025-03-06 22:35",
+    "destinationAirport": "Incheon International Airport",
+    "destinationTemperature": 3.1,
+    "condition": "Clear"
+  },
+  {
+    "flightNumber": "338",
+    "departureTime": "2025-03-06 22:45",
+    "destinationAirport": "Entebbe International Airport",
+    "destinationTemperature": 30.2,
+    "condition": "Partly cloudy"
+  },
+  {
+    "flightNumber": "6338",
+    "departureTime": "2025-03-06 22:45",
+    "destinationAirport": "Entebbe International Airport",
+    "destinationTemperature": 30.2,
+    "condition": "Partly cloudy"
+  },
+  {
+    "flightNumber": "7583",
+    "departureTime": "2025-03-06 22:45",
+    "destinationAirport": "Entebbe International Airport",
+    "destinationTemperature": 30.2,
+    "condition": "Partly cloudy"
+  },
+  {
+    "flightNumber": "8612",
+    "departureTime": "2025-03-06 22:50",
+    "destinationAirport": "Dubai International Airport",
+    "destinationTemperature": 31.4,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "500",
+    "departureTime": "2025-03-06 22:50",
+    "destinationAirport": "Leonardo Da Vinci (Fiumicino) International Airport",
+    "destinationTemperature": 17.1,
+    "condition": "Sunny"
+  },
+  {
+    "flightNumber": "612",
+    "departureTime": "2025-03-06 22:50",
+    "destinationAirport": "Dubai International Airport",
+    "destinationTemperature": 31.4,
+    "condition": "Sunny"
+  }
+]
