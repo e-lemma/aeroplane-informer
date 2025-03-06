@@ -12,6 +12,47 @@ import blessed from 'blessed'
 export class AeroplaneSearcherCLI {
   private readonly loadedAirportData: Airport[] = FileHandler.read()
 
+  async start() {
+    const flightApiKey = process.env.FLIGHT_API_KEY
+    const weatherApiKey = process.env.WEATHER_API_KEY
+
+    if (flightApiKey === undefined || weatherApiKey === undefined) {
+      throw new Error('API keys not found...')
+    }
+
+    this.printGreeting()
+
+    let foundMatches: Airport[] = []
+
+    while (foundMatches.length === 0) {
+      const userInput = await this.getUserInput()
+      foundMatches = this.getMatches(userInput)
+
+      if (foundMatches.length === 0) {
+        console.log('No matching airports found. Please try again.')
+      }
+    }
+
+    const matchingAirport: Airport =
+      await this.getChoiceFromMatches(foundMatches)
+
+    console.log(`Retrieving flight data for ${matchingAirport.name}...`)
+
+    const data: TransformedFlightData[] = await this.getAndFormatData(
+      flightApiKey,
+      weatherApiKey,
+      matchingAirport.iata,
+    )
+
+    if (data.length > 0) {
+      FileHandler.exportAsJSON(data)
+      this.printTable(data)
+    }
+    console.log(
+      `Could not find any flights departing from '${matchingAirport.name}'`,
+    )
+  }
+
   printTable(flightData: TransformedFlightData[]) {
     const tableData = []
 
@@ -101,47 +142,6 @@ export class AeroplaneSearcherCLI {
     }
 
     return formattedData
-  }
-
-  async start() {
-    const flightApiKey = process.env.FLIGHT_API_KEY
-    const weatherApiKey = process.env.WEATHER_API_KEY
-
-    if (flightApiKey === undefined || weatherApiKey === undefined) {
-      throw new Error('API keys not found...')
-    }
-
-    this.printGreeting()
-
-    let foundMatches: Airport[] = []
-
-    while (foundMatches.length === 0) {
-      const userInput = await this.getUserInput()
-      foundMatches = this.getMatches(userInput)
-
-      if (foundMatches.length === 0) {
-        console.log('No matching airports found. Please try again.')
-      }
-    }
-
-    const matchingAirport: Airport =
-      await this.getChoiceFromMatches(foundMatches)
-
-    console.log(`Retrieving flight data for ${matchingAirport.name}...`)
-
-    const data: TransformedFlightData[] = await this.getAndFormatData(
-      flightApiKey,
-      weatherApiKey,
-      matchingAirport.iata,
-    )
-
-    if (data.length > 0) {
-      FileHandler.exportAsJSON(data)
-      this.printTable(data)
-    }
-    console.log(
-      `Could not find any flights departing from '${matchingAirport.name}'`,
-    )
   }
 
   printGreeting(): void {
