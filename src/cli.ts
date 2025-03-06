@@ -10,7 +10,7 @@ import { input, select } from '@inquirer/prompts'
 import blessed from 'blessed'
 
 export class AeroplaneSearcherCLI {
-  constructor(private readonly AirportData: Airport[]) {}
+  constructor(private readonly airportData: Airport[]) {}
 
   async start() {
     const flightApiKey = process.env.FLIGHT_API_KEY
@@ -164,7 +164,7 @@ export class AeroplaneSearcherCLI {
   }
 
   getMatches(input: string): Airport[] {
-    const matches = this.AirportData.filter((airport: Airport) => {
+    const matches = this.airportData.filter((airport: Airport) => {
       if (airport.name !== null) {
         return airport.name.toLowerCase().includes(input)
       }
@@ -174,7 +174,7 @@ export class AeroplaneSearcherCLI {
   }
 
   private getAirportName(iata: string): string | undefined {
-    return this.AirportData.find((airport) => airport.iata === iata)?.name
+    return this.airportData.find((airport) => airport.iata === iata)?.name
   }
 
   private createAirportSelection(airports: Airport[]) {
