@@ -54,7 +54,7 @@ export class AeroplaneSearcherCLI {
     }
   }
 
-  private printTable(flightData: TransformedFlightData[]) {
+  printTable(flightData: TransformedFlightData[]) {
     const tableData = []
 
     tableData.push([
@@ -118,7 +118,7 @@ export class AeroplaneSearcherCLI {
     screen.render()
   }
 
-  private async getAndFormatData(
+  async getAndFormatData(
     flightsApiKey: string,
     weatherApiKey: string,
     iata: string,
@@ -148,11 +148,11 @@ export class AeroplaneSearcherCLI {
     return formattedData
   }
 
-  private printGreeting(): void {
+  printGreeting(): void {
     console.log('✈️✈️✈️ Welcome to the aeroplane searcher! ✈️✈️✈️')
   }
 
-  private async getUserInput(): Promise<string> {
+  async getUserInput(): Promise<string> {
     const airportArgument = ArgumentHandler.parseArgument()
 
     if (!airportArgument) {
@@ -166,7 +166,7 @@ export class AeroplaneSearcherCLI {
     return airportArgument.trim().toLowerCase()
   }
 
-  private getMatches(input: string): Airport[] {
+  getMatches(input: string): Airport[] {
     const matches = this.airportData.filter((airport: Airport) => {
       if (airport.name !== null) {
         return airport.name.toLowerCase().includes(input)
@@ -187,7 +187,7 @@ export class AeroplaneSearcherCLI {
     }))
   }
 
-  private async getChoiceFromMatches(matches: Airport[]): Promise<Airport> {
+  async getChoiceFromMatches(matches: Airport[]): Promise<Airport> {
     if (matches.length === 0) {
       throw new Error('Could not find any airports matching that name.')
     } else if (matches.length === 1) {
