@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/e-lemma/aeroplane-informer#readme",
   "devDependencies": {
+    "@types/blessed": "^0.1.25",
     "@types/node": "^22.13.9",
     "@typescript-eslint/eslint-plugin": "^8.26.0",
     "@typescript-eslint/parser": "^8.26.0",
@@ -35,6 +36,7 @@
   "dependencies": {
     "@inquirer/prompts": "^7.3.2",
     "axios": "^1.8.1",
+    "blessed": "^0.1.81",
     "commander": "^13.1.0",
     "dotenv": "^16.4.7"
   }
