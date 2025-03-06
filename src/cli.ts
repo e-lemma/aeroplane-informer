@@ -7,15 +7,77 @@ import {
 import { FileHandler, ArgumentHandler } from './handler.js'
 import { FlightService, WeatherService } from './service.js'
 import { input, select } from '@inquirer/prompts'
+import blessed from 'blessed'
 
 export class AeroplaneSearcherCLI {
   private readonly loadedAirportData: Airport[] = FileHandler.read()
-  /*
-   * Find all the flights leaving that airport
-   * Extract the location of all of the destinations of the airports
-   * Combine that data with the weather at each of the destinations of the flights
-   * Export this data to a HTML file
-   */
+
+  printTable(flightData: TransformedFlightData[]) {
+    const tableData = []
+
+    tableData.push([
+      'Flight Number',
+      'Departure Time',
+      'Destination Airport',
+      'Destination Temperature',
+      'Weather Condition',
+      'Is Delayed?',
+    ])
+
+    flightData.forEach((flight: TransformedFlightData) => {
+      let delayStatus
+      if (!flight.delay) {
+        delayStatus = '{bold}{green-fg}' + 'On Time' + '{/green-fg}{/bold}'
+      } else {
+        delayStatus =
+          '{bold}{red-fg}' + `${flight.delay} Minutes` + '{/red-fg}{/bold}'
+      }
+
+      tableData.push([
+        flight.flightNumber,
+        flight.departureTime,
+        flight.destinationAirport,
+        flight.destinationTemperature + ' °C',
+        flight.condition,
+        delayStatus,
+      ])
+    })
+
+    const screen = blessed.screen({
+      smartCSR: true,
+      title: 'Departing Flights',
+    })
+
+    const table = blessed.listtable({
+      parent: screen,
+      top: 'center',
+      left: 'center',
+      width: '90%',
+      height: '80%',
+      align: 'center',
+      tags: true,
+      border: { type: 'line' },
+      style: {
+        border: { fg: 'cyan' },
+        header: { bold: true, fg: 'yellow' },
+        cell: { fg: 'white' },
+        selected: { bg: 'blue' },
+      },
+      keys: true,
+      vi: true,
+      mouse: true,
+      scrollable: true,
+      alwaysScroll: true,
+      scrollbar: {
+        ch: ' ',
+      },
+      data: tableData,
+    })
+
+    table.focus()
+    screen.key(['q', 'escape'], () => process.exit(0))
+    screen.render()
+  }
 
   async getAndFormatData(
     flightsApiKey: string,
@@ -58,13 +120,13 @@ export class AeroplaneSearcherCLI {
     this.printGreeting()
     const foundMatches = this.getMatches(await this.getUserInput())
     const matchingAirport = await this.getChoiceFromMatches(foundMatches)
-    console.log(`Retrieving flight data for ${matchingAirport.name}`)
+    console.log(`Retrieving flight data for ${matchingAirport.name}...`)
     const data = await this.getAndFormatData(
       flightApiKey,
       weatherApiKey,
       matchingAirport.iata,
     )
-    console.log(data)
+    this.printTable(data)
   }
 
   printGreeting(): void {
