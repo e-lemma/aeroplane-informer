@@ -146,7 +146,7 @@ export class AeroplaneSearcherCLI {
   }
 
   printGreeting(): void {
-    console.log('Welcome to the aeroplane searcher!')
+    console.log('✈️✈️✈️ Welcome to the aeroplane searcher! ✈️✈️✈️')
   }
 
   async getUserInput(): Promise<string> {

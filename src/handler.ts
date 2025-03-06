@@ -23,7 +23,7 @@ export class FileHandler {
         `./data/exports/${getTimestamp()}.json`,
         JSON.stringify(data, null, 2),
       )
-      console.log('Changes saved!')
+      console.log('Search saved!')
     } catch (error) {
       console.error(`Error writing JSON: ${error}`)
       throw error
