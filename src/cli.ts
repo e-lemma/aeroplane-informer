@@ -112,10 +112,24 @@ export class AeroplaneSearcherCLI {
     }
 
     this.printGreeting()
-    const foundMatches = this.getMatches(await this.getUserInput())
-    const matchingAirport = await this.getChoiceFromMatches(foundMatches)
+
+    let foundMatches: Airport[] = []
+
+    while (foundMatches.length === 0) {
+      const userInput = await this.getUserInput()
+      foundMatches = this.getMatches(userInput)
+
+      if (foundMatches.length === 0) {
+        console.log('No matching airports found. Please try again.')
+      }
+    }
+
+    const matchingAirport: Airport =
+      await this.getChoiceFromMatches(foundMatches)
+
     console.log(`Retrieving flight data for ${matchingAirport.name}...`)
-    const data = await this.getAndFormatData(
+
+    const data: TransformedFlightData[] = await this.getAndFormatData(
       flightApiKey,
       weatherApiKey,
       matchingAirport.iata,
