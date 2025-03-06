@@ -3,7 +3,7 @@ import { Command } from 'commander'
 import { Airport, TransformedFlightData } from './interface.js'
 
 export class FileHandler {
-  static read(): Airport[] {
+  static loadAirportData(): Airport[] {
     try {
       const data = readFileSync('./data/airports.json', 'utf-8')
       return JSON.parse(data)
