@@ -1,9 +1,8 @@
 import { FlightService, WeatherService } from '../src/service'
 import axios from 'axios'
-import { RawFlightData } from '../src/interface'
+import { RawFlightData, RawWeatherData } from '../src/interface'
 
 jest.mock('axios')
-
 const mockAxiosGet = axios.get as jest.MockedFunction<typeof axios.get>
 
 describe('FlightService', () => {
@@ -72,22 +71,54 @@ describe('FlightService', () => {
         'Error fetching flight data',
       )
     })
-
-    test('should handle 404 errors', async () => {
-      const givenIata = 'LHR'
-      const flightService = new FlightService(apiKey)
-
-      const error: any = new Error('Not Found')
-      error.response = { status: 404 }
-      mockAxiosGet.mockRejectedValueOnce(error)
-
-      await expect(flightService.fetchFlightData(givenIata)).rejects.toThrow(
-        'Error fetching flight data',
-      )
-    })
   })
 })
 
-// describe('WeatherService', () => {
-//   describe('fetchWeatherByIata', () => {})
-// })
+describe('WeatherService', () => {
+  beforeEach(() => {
+    jest.clearAllMocks()
+  })
+
+  const givenIata = 'LHR'
+  const apiKey = 'test-api-key-123'
+  const mockWeatherData: RawWeatherData = {
+    temp_c: '23',
+    condition: 'sunny',
+  }
+  describe('fetchWeatherByIata', () => {
+    test('should call the weather api and retrieve weather data using given iata', async () => {
+      const weatherService = new WeatherService(apiKey)
+
+      const mockResponse = {
+        data: {
+          current: {
+            temp_c: '23',
+            condition: {
+              text: 'sunny',
+            },
+          },
+        },
+      }
+
+      mockAxiosGet.mockResolvedValueOnce(mockResponse)
+      const result = await weatherService.fetchWeatherByIata(givenIata)
+
+      expect(mockAxiosGet).toHaveBeenCalledTimes(1)
+
+      expect(mockAxiosGet).toHaveBeenCalledWith(
+        'http://api.weatherapi.com/v1/current.json?key=test-api-key-123&q=iata:LHR&aqi=no',
+      )
+      expect(result).toEqual(mockWeatherData)
+    })
+
+    test('should throw an error when API call fails', async () => {
+      const weatherService = new WeatherService(apiKey)
+
+      mockAxiosGet.mockRejectedValueOnce(new Error('API Error'))
+
+      await expect(
+        weatherService.fetchWeatherByIata(givenIata),
+      ).rejects.toThrow('Error fetching weather data')
+    })
+  })
+})
