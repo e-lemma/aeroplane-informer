@@ -25,14 +25,94 @@ describe('AeroplaneSearcherCLI', () => {
       lat: '51.572777',
       size: 'medium',
     },
+    {
+      iata: 'LYX',
+      lon: '0.938414',
+      iso: 'GB',
+      status: 1,
+      name: 'Lydd Airport',
+      continent: 'EU',
+      type: 'airport',
+      lat: '50.955334',
+      size: 'medium',
+    },
+    {
+      iata: 'MSE',
+      lon: '1.35',
+      iso: 'GB',
+      status: 1,
+      name: 'Kent International Airport',
+      continent: 'EU',
+      type: 'airport',
+      lat: '51.35',
+      size: 'medium',
+    },
+    {
+      iata: 'CAX',
+      lon: '-2.809444',
+      iso: 'GB',
+      status: 1,
+      name: 'Carlisle Airport',
+      continent: 'EU',
+      type: 'airport',
+      lat: '54.93667',
+      size: 'medium',
+    },
   ]
 
   const cli = new AeroplaneSearcherCLI(testAirportData)
 
-  test('getMatches should return airports matching the input', () => {
-    const matches = cli.getMatches('heathrow')
+  describe('getMatches', () => {
+    test('should return airports matching the input', () => {
+      const matches: Airport[] = cli.getMatches('heathrow')
 
-    expect(matches).toHaveLength(1)
-    expect(matches[0].iata).toBe('LHR')
+      expect(matches).toHaveLength(1)
+      expect(matches[0].iata).toBe('LHR')
+    })
+
+    test('should return an empty array if no matches found', () => {
+      const matches: Airport[] = cli.getMatches('luton')
+
+      expect(matches).toHaveLength(0)
+      expect(matches).toEqual([])
+    })
+  })
+
+  describe('getChoiceFromMatches', () => {
+    test('should throw an error if no matches are found', async () => {
+      expect(cli.getChoiceFromMatches([])).rejects.toThrow(
+        'Could not find any airports matching that name.',
+      )
+    })
+
+    test('should instantly return the the only match found', async () => {
+      const choice = await cli.getChoiceFromMatches([
+        {
+          iata: 'LHR',
+          lon: '-0.453566',
+          iso: 'GB',
+          status: 1,
+          name: 'London Heathrow Airport',
+          continent: 'EU',
+          type: 'airport',
+          lat: '51.469604',
+          size: 'large',
+        },
+      ])
+
+      expect(choice).toEqual({
+        iata: 'LHR',
+        lon: '-0.453566',
+        iso: 'GB',
+        status: 1,
+        name: 'London Heathrow Airport',
+        continent: 'EU',
+        type: 'airport',
+        lat: '51.469604',
+        size: 'large',
+      })
+    })
+
+    test('should return the user-selected airport', () => {})
   })
 })
