@@ -1,12 +1,14 @@
 import { AeroplaneSearcherCLI } from '../src/cli'
 import { Airport } from '../src/interface'
-import { select } from '@inquirer/prompts'
+import { input, select } from '@inquirer/prompts'
 
 jest.mock('@inquirer/prompts', () => ({
   select: jest.fn(),
+  input: jest.fn(),
 }))
 
 const mockSelect = select as jest.MockedFunction<typeof select>
+const mockInput = input as jest.MockedFunction<typeof input>
 
 describe('AeroplaneSearcherCLI', () => {
   const testAirportData: Airport[] = [
@@ -128,6 +130,33 @@ describe('AeroplaneSearcherCLI', () => {
       })
 
       expect(choice).toEqual(selectedAirport)
+    })
+  })
+
+  describe('getUserInput', () => {
+    beforeEach(() => {
+      jest.clearAllMocks()
+    })
+
+    test('should use the parsed airport argument if present', async () => {
+      const cli = new AeroplaneSearcherCLI(testAirportData)
+
+      const userInput = await cli.getUserInput('Heathrow')
+
+      expect(userInput).toBe('heathrow')
+    })
+
+    test('should prompt user when airport argument is not provided', async () => {
+      const cli = new AeroplaneSearcherCLI(testAirportData)
+
+      mockInput.mockResolvedValue('Luton')
+      const userInput = await cli.getUserInput()
+
+      expect(mockInput).toHaveBeenCalledWith({
+        message: 'Enter an airport:',
+        required: true,
+      })
+      expect(userInput).toBe('luton')
     })
   })
 })
