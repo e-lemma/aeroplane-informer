@@ -118,7 +118,7 @@ export class AeroplaneSearcherCLI {
     screen.render()
   }
 
-  async getAndFormatData(
+  private async getAndFormatData(
     flightsApiKey: string,
     weatherApiKey: string,
     iata: string,
@@ -148,7 +148,7 @@ export class AeroplaneSearcherCLI {
     return formattedData
   }
 
-  printGreeting(): void {
+  private printGreeting(): void {
     console.log('✈️✈️✈️ Welcome to the aeroplane searcher! ✈️✈️✈️')
   }
 
