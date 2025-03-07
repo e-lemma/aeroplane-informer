@@ -1,5 +1,12 @@
 import { AeroplaneSearcherCLI } from '../src/cli'
 import { Airport } from '../src/interface'
+import { select } from '@inquirer/prompts'
+
+jest.mock('@inquirer/prompts', () => ({
+  select: jest.fn(),
+}))
+
+const mockSelect = select as jest.MockedFunction<typeof select>
 
 describe('AeroplaneSearcherCLI', () => {
   const testAirportData: Airport[] = [
@@ -60,10 +67,10 @@ describe('AeroplaneSearcherCLI', () => {
     },
   ]
 
-  const cli = new AeroplaneSearcherCLI(testAirportData)
-
   describe('getMatches', () => {
     test('should return airports matching the input', () => {
+      const cli = new AeroplaneSearcherCLI(testAirportData)
+
       const matches: Airport[] = cli.getMatches('heathrow')
 
       expect(matches).toHaveLength(1)
@@ -71,6 +78,8 @@ describe('AeroplaneSearcherCLI', () => {
     })
 
     test('should return an empty array if no matches found', () => {
+      const cli = new AeroplaneSearcherCLI(testAirportData)
+
       const matches: Airport[] = cli.getMatches('luton')
 
       expect(matches).toHaveLength(0)
@@ -79,40 +88,46 @@ describe('AeroplaneSearcherCLI', () => {
   })
 
   describe('getChoiceFromMatches', () => {
+    beforeEach(() => {
+      jest.clearAllMocks()
+    })
+
     test('should throw an error if no matches are found', async () => {
-      expect(cli.getChoiceFromMatches([])).rejects.toThrow(
+      const cli = new AeroplaneSearcherCLI(testAirportData)
+
+      await expect(cli.getChoiceFromMatches([])).rejects.toThrow(
         'Could not find any airports matching that name.',
       )
     })
 
     test('should instantly return the the only match found', async () => {
-      const choice = await cli.getChoiceFromMatches([
-        {
-          iata: 'LHR',
-          lon: '-0.453566',
-          iso: 'GB',
-          status: 1,
-          name: 'London Heathrow Airport',
-          continent: 'EU',
-          type: 'airport',
-          lat: '51.469604',
-          size: 'large',
-        },
-      ])
+      const cli = new AeroplaneSearcherCLI(testAirportData)
+      const onlyMatch = testAirportData[0]
 
-      expect(choice).toEqual({
-        iata: 'LHR',
-        lon: '-0.453566',
-        iso: 'GB',
-        status: 1,
-        name: 'London Heathrow Airport',
-        continent: 'EU',
-        type: 'airport',
-        lat: '51.469604',
-        size: 'large',
-      })
+      const choice = await cli.getChoiceFromMatches([onlyMatch])
+
+      expect(choice).toEqual(onlyMatch)
+      expect(select).not.toHaveBeenCalled()
     })
 
-    test('should return the user-selected airport', () => {})
+    test('should prompt user to select when multiple matches are found', async () => {
+      const cli = new AeroplaneSearcherCLI(testAirportData)
+
+      const selectedAirport = testAirportData[2]
+
+      mockSelect.mockResolvedValue(selectedAirport)
+
+      const choice = await cli.getChoiceFromMatches(testAirportData)
+
+      expect(select).toHaveBeenCalledWith({
+        message: 'Multiple airports found, please select one:',
+        choices: testAirportData.map((airport) => ({
+          name: airport.name,
+          value: airport,
+        })),
+      })
+
+      expect(choice).toEqual(selectedAirport)
+    })
   })
 })
