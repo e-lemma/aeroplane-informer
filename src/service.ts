@@ -1,5 +1,4 @@
 import { RawFlightData, RawWeatherData } from './interface.js'
-import 'dotenv/config'
 import axios from 'axios'
 
 export class FlightService {
