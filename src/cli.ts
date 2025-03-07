@@ -25,7 +25,7 @@ export class AeroplaneSearcherCLI {
     let foundMatches: Airport[] = []
 
     while (foundMatches.length === 0) {
-      const userInput = await this.getUserInput()
+      const userInput = await this.getUserInput(ArgumentHandler.parseArgument())
       foundMatches = this.getMatches(userInput)
 
       if (foundMatches.length === 0) {
@@ -152,9 +152,7 @@ export class AeroplaneSearcherCLI {
     console.log('✈️✈️✈️ Welcome to the aeroplane searcher! ✈️✈️✈️')
   }
 
-  async getUserInput(): Promise<string> {
-    const airportArgument = ArgumentHandler.parseArgument()
-
+  async getUserInput(airportArgument?: string): Promise<string> {
     if (!airportArgument) {
       const userInput = await input({
         message: 'Enter an airport:',
