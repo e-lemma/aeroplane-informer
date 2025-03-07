@@ -177,7 +177,8 @@ export class AeroplaneSearcherCLI {
   }
 
   private getAirportName(iata: string): string | undefined {
-    return this.airportData.find((airport) => airport.iata === iata)?.name
+    const airport = this.airportData.find((airport) => airport.iata === iata)
+    return airport ? airport.name : undefined
   }
 
   private createAirportSelection(airports: Airport[]) {
