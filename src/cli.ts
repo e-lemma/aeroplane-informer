@@ -159,9 +159,13 @@ export class AeroplaneSearcherCLI {
         required: true,
       })
 
-      return userInput.trim().toLowerCase()
+      return this.cleanUserInput(userInput)
     }
-    return airportArgument.trim().toLowerCase()
+    return this.cleanUserInput(airportArgument)
+  }
+
+  private cleanUserInput(userInput: string): string {
+    return userInput.trim().toLowerCase()
   }
 
   getMatches(input: string): Airport[] {
